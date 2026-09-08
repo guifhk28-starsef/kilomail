@@ -10,16 +10,15 @@ body{
     background-color: #f8f9fa;
     font-family: 'Plus Jakarta Sans',arial,sans-serif ;
     margin:0 ;   
-    caret-color:transparent ;                           
+    caret-color:transparent ;   
+                          
 }
 html, body {
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden;  
     position: relative; /* يمنع تسريب العناصر المطلقة */
 }
-body{
-    overflow-x: hidden !important;
-}
+
 :root {
   --visible-cards: 6;
   --gap: 20px;
@@ -288,6 +287,7 @@ ul{margin-bottom:25px ;}
     position: absolute;
     top:0;
     left:0;
+    border-radius:20px ;
     object-fit:cover;
     box-shadow: 0 15px 35px rgba(0, 102, 255, 0.2);
     transition: opacity 0.4s ease-in-out; /* إضافة أنيميشن التغيير */
@@ -1953,7 +1953,40 @@ ul{margin-bottom:25px ;}
     }
 
 }
-@media (max-width: 1750px) { 
+@media (max-width:1750px){
+    .text-box{
+        font-size:25px ;
+
+    }
+    .images-box{
+       margin-top:0 ;
+    }
+    .hid-img{
+        max-height:500px ;
+    }
+} 
+
+@media (max-width:1250px){
+    .text-box{
+        font-size:20px ;
+    }
+    .hid-img{
+        max-height:400px ;
+    }
+}
+@media (max-width:1440px){
+    .absolute h1{
+        font-size:60px ;
+    }
+    .absolute p{
+        font-size:20px ;
+    }
+    .another-image img{
+        right:3% ;
+        width:400px ;
+    }
+}
+@media (max-width: 1000px) { 
     .after-title{
         flex-direction: column;
         gap: 40px;
@@ -1987,7 +2020,7 @@ ul{margin-bottom:25px ;}
         display: block;
     }
 }
-@media (max-width:1430px){
+@media (max-width:1000px){
         .hero {
         padding: 120px 20px 50px 20px;
         margin-bottom: 50px;
