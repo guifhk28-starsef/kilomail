@@ -2010,7 +2010,7 @@ ul{margin-bottom:25px ;}
         font-size:1vw;
     }
 }
-@media ( 1440px>= width >=1700px){
+@media ( 1440px <= width <=1700px){
     .animation-about{
         width:85% ;
     }
