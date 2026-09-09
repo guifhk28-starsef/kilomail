@@ -2065,23 +2065,21 @@ ul{margin-bottom:25px ;}
             left 0.6s ease,
             font-size 0.6s ease;
     }
-
-    }
     .about-card span{
         max-width:300px ;
     }
     .about-card.active{
         padding-top:100px ;
     }
-    .about-card.active h2{
-        
-    }
     .need-to-innerpadding{
         padding-bottom:20px ;
     }
-
-
 }
+
+
+
+
+
 @media (max-width: 1000px) { 
     .after-title{
         flex-direction: column;
