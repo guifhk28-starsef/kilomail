@@ -1999,19 +1999,25 @@ ul{margin-bottom:25px ;}
         max-height:400px ;
     }
 }
-@media (max-width:1700px){
-    .animation-about{
-        width:85% ;
+@media (1024px <= width <=1350px){
+    .about-card h2{
+        font-size:80px ;
+        margin-right:-10px ;
     }
+}
+@media (1450px <= width <= 1700px){
     .about-card h3{
         font-size:1vw;
     }
-    .about-card h2{
-        font-size:7vw ;
+}
+@media ( 1440px>= width >=1700px){
+    .animation-about{
+        width:85% ;
     }
 
 }
-@media (max-width:1450px){
+
+@media (max-width:1439px){
 
     .absolute h1{
         font-size:60px ;
@@ -2023,11 +2029,58 @@ ul{margin-bottom:25px ;}
         right:3% ;
         width:400px ;
     }
+    .animation-about{
+        width:95% ;
+        height: auto;
+    }
+    .need-to-innerpadding{
+        padding-left:25px ;
+        padding-right:25px ;
+    }
+    
 }
 @media (1000px <= width <= 1100px){
     .absolute{
         margin-left:75px ;
     }
+}
+@media (max-width:900px){
+    .header{
+        margin-top:20px ;
+    }
+    .need-to-innerpadding{
+        flex-direction: column;
+    }
+    .about-card{
+        position: relative;
+        transition: padding-top 0.6s ease;
+    }
+    .about-card h2{
+       position: absolute;
+       top:10px ;
+       right:0 ;
+       transition: 
+            top 0.6s ease,
+            right 0.6s ease,
+            left 0.6s ease,
+            font-size 0.6s ease;
+    }
+
+    }
+    .about-card span{
+        max-width:300px ;
+    }
+    .about-card.active{
+        padding-top:100px ;
+    }
+    .about-card.active h2{
+        
+    }
+    .need-to-innerpadding{
+        padding-bottom:20px ;
+    }
+
+
 }
 @media (max-width: 1000px) { 
     .after-title{
