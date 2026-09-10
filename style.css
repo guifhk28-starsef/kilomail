@@ -1434,7 +1434,7 @@ ul{margin-bottom:25px ;}
 
  .ticker-section .card {
   width:calc((100vw - (var(--gap) * (var(--visible-cards) - 1))) / var(--visible-cards)) ;
-  aspect-ratio: 16 / 10;
+  height: 180px;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
@@ -2039,6 +2039,18 @@ ul{margin-bottom:25px ;}
     }
     
 }
+@media (max-width:1300px){
+    :root{
+        --visible-cards:5;
+    }
+}
+@media(max-width:1100px){
+    :root{
+        --visible-cards:4;
+    }
+
+}
+
 @media (1000px <= width <= 1100px){
     .absolute{
         margin-left:75px ;
@@ -2079,8 +2091,6 @@ ul{margin-bottom:25px ;}
         --gab:12px;
     
 }
-    .ticker-section .card{
-    }
 }
 
 
@@ -2206,7 +2216,7 @@ ul{margin-bottom:25px ;}
 /* تحسين إضافي للشاشات الأصغر من 500px */
 
 @media (max-width:900px){
-    .card{
+    .features .card{
         width:45% ;
         min-height:450px ;
         border-radius:10px ;
@@ -2265,6 +2275,9 @@ ul{margin-bottom:25px ;}
     .hid-img{
         width:80% ;
     }
+    :root{
+        --visible-cards:3.5;
+    }
 
 }
 @media (max-width:870px){
@@ -2276,7 +2289,7 @@ ul{margin-bottom:25px ;}
     }
 }
 @media (max-width: 768px) {
-    .card {
+     .features .card {
         padding: 0;
         margin: 10px 20px;
         width:100% ; 
@@ -2286,7 +2299,7 @@ ul{margin-bottom:25px ;}
         align-items: stretch;
         min-height:500px ;
     }
-    .card img{
+    .features .card img{
         max-height:250px ;
         object-fit: cover;
     }
@@ -2376,8 +2389,11 @@ ul{margin-bottom:25px ;}
     .text-box{
         font-size:15px ;
     }
-    .images-box{
-        
+         
+}
+@media (max-width:650px){
+    :root{
+        --visible-cards:2.5;
     }
 }
 @media (max-width:500px) {
@@ -2387,6 +2403,18 @@ ul{margin-bottom:25px ;}
     .smart-features{
         padding:20px ;
 
+    }
+    :root{
+        --visible-cards:2;
+    }
+    .ticker-header span{
+        font-size:40px ;
+    }
+    .ticker-header h2{
+        font-size:20px ;
+    }
+    .ticker-header p{
+        font-size:18px ;
     }
 
 }
