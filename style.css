@@ -2292,6 +2292,14 @@ ul{margin-bottom:25px ;}
         font-size: 14px;        /* تصغير النص الوصفي */      /* ضبط ارتفاع السطر */
     }
 }
+@media(max-width:700px){
+    .header{
+        font-size:30px ;
+    }
+    .header-span{
+        font-size:10px ;
+    }
+}
 
 
 /* =========================================================
@@ -2387,4 +2395,14 @@ ul{margin-bottom:25px ;}
     .links a {
         font-size: 13px;
     }
+}
+@media (max-width:470px){
+    .about-card h2{
+        font-size: 70px;
+        margin-right: -10px;
+    }
+    .about-card h3{
+        font-size:20px ;
+    }
+
 }
