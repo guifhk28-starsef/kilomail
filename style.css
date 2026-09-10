@@ -1434,7 +1434,7 @@ ul{margin-bottom:25px ;}
 
  .ticker-section .card {
   width:calc((100vw - (var(--gap) * (var(--visible-cards) - 1))) / var(--visible-cards)) ;
-  height: 180px;
+  aspect-ratio: 16 / 10;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
@@ -2073,6 +2073,13 @@ ul{margin-bottom:25px ;}
     }
     .need-to-innerpadding{
         padding-bottom:20px ;
+    }
+    :root{
+        --visible-cards:3.5;
+        --gab:12px;
+    
+}
+    .ticker-section .card{
     }
 }
 
