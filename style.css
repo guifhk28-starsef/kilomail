@@ -1963,6 +1963,9 @@ ul{margin-bottom:25px ;}
     .card{
         min-width:450px;
     }
+    :root{
+        --visible-cards:7;
+    }
 }
 @media (max-width:1712px){
     .card{
@@ -2044,12 +2047,19 @@ ul{margin-bottom:25px ;}
         --visible-cards:5;
     }
 }
+@media (max-width:1200px){
+    .grid-service{
+        grid-template-columns: repeat(auto-fit,minmax(295px,1fr)) ;
+        justify-content: center;
+    }
+}
 @media(max-width:1100px){
     :root{
         --visible-cards:4;
     }
 
 }
+
 
 @media (1000px <= width <= 1100px){
     .absolute{
@@ -2389,6 +2399,9 @@ ul{margin-bottom:25px ;}
     .text-box{
         font-size:15px ;
     }
+    .h2-header{
+        font-size: 35px;
+    }
          
 }
 @media (max-width:650px){
@@ -2440,4 +2453,33 @@ ul{margin-bottom:25px ;}
         font-size:20px ;
     }
 
+}
+@media (max-width:450px){
+    :root{
+        --visible-cards:1.5;
+    }
+
+}
+@media (hover: none) {
+  /* إلغاء التفاعل بالماوس أو اللمس مع الكروت والشريط تماماً */
+  .ticker-row,
+  .ticker-track,
+  .ticker-row .card {
+    pointer-events: none;
+  }
+
+  /* التأكيد على إن الأنيميشن يستمر بدون توقف */
+  .ticker-row:hover .ticker-track {
+    animation-play-state: running !important;
+  }
+
+  /* إلغاء أي تأثيرات شكلية كانت بتنزل على الكروت */
+  .ticker-row:hover .card {
+    opacity: 1 !important;
+    filter: none !important;
+  }
+
+  .ticker-row .card:hover {
+    transform: none !important;
+  }
 }
