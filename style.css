@@ -6,6 +6,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 body{
     background-color: #f8f9fa;
     font-family: 'Plus Jakarta Sans',arial,sans-serif ;
@@ -1725,6 +1726,7 @@ ul{margin-bottom:25px ;}
     padding:50px 100px ;
     border-radius:20px ;
     text-align: center;
+    min-width: 295px;
     font-size:20px ;
 }
 .rate-title h3{
@@ -1771,7 +1773,6 @@ ul{margin-bottom:25px ;}
 .comments{
     display: grid;
     grid-template-columns:repeat(3,1fr) ;
-    padding:50px 100px ;
     gap:20px;
 }
 .comment-card{
@@ -1805,7 +1806,7 @@ ul{margin-bottom:25px ;}
 }
 .plans-pricing{
     display: flex;
-    padding:50px 200px ;
+    padding:50px ;
     gap:50px;
     justify-content: space-between;
     align-items: flex-start;
@@ -1926,6 +1927,16 @@ ul{margin-bottom:25px ;}
     
     /* إعطاء لون خلفية من نفس لون أطراف الصورة عشان لما الشاشة تكبر يتدمجوا سوا */
     background-color: #f4f5f7; /* استخدم الكود الهكسا الدقيق للون الخلفية الناعمة عندك */
+}
+
+
+/* الكروت أو الأجزاء اللي جوه */
+.need-to-outpadding section {
+  width: 90%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-inline: auto;
+
 }
 
 @media (min-width:2900px){
@@ -2221,6 +2232,9 @@ ul{margin-bottom:25px ;}
     .nav-bar .create-btn {
         display: none; 
     }
+    .plans-pricing{
+        flex-direction: column;
+    }
 }
 
 /* تحسين إضافي للشاشات الأصغر من 500px */
@@ -2288,6 +2302,14 @@ ul{margin-bottom:25px ;}
     :root{
         --visible-cards:3.5;
     }
+    .comments{
+        grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+        justify-content: center;
+    }
+    .rate-title{
+        padding-left: 70px;
+         padding-right: 70px;
+    }
 
 }
 @media (max-width:870px){
@@ -2328,6 +2350,75 @@ ul{margin-bottom:25px ;}
     }
     .header-span{
         font-size:10px ;
+    }
+    .top-of-plan{
+        flex-direction: column;
+        align-items: flex-start;
+        gap:10px;
+    }
+    .plan-card{
+        max-width: 450px;
+        box-sizing: border-box;
+        width:100% ;
+    }
+    .plan-card h3{
+        font-size:20px ;
+    }
+    .plan-card .money{
+        font-size:26px ;
+
+    }
+    .plan-card .month{
+        font-size: 13px;
+    }
+    .rate-btn.get-btn{
+        font-size:15px ;
+        padding:2px ;
+        margin-right:10px ;
+    }
+    .bottom-of-plan p{
+        font-size: 14px;
+        margin:2px ;
+    }
+    .plans-pricing{
+        justify-content: center;
+        align-items: center;
+        margin-top:20px ;
+    }
+    .colorfull {
+        padding: 4px 10px;
+        font-size: 10px;
+        align-self: flex-start;
+    }
+    .flexen{
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap:0 ;
+        align-items: flex-start;
+    }
+    .left-of-plans p{
+        display: none;
+    }
+}
+@media (max-width:665px){
+    .rate-title{
+        padding-left:30px ;
+        padding-right:30px ;
+        margin-left: 30px !important;
+        margin-right:30px   !important;
+        min-width: 295px !important;
+        box-sizing: border-box;
+        margin: 50px auto  !important;
+    }
+    .rate-title h2{
+        font-size:20px ;
+    }
+    .rate-title h3{
+        font-size: 13px;
+    }
+    .rate-btn{
+        font-size:15px ;
     }
 }
 
@@ -2482,4 +2573,10 @@ ul{margin-bottom:25px ;}
   .ticker-row .card:hover {
     transform: none !important;
   }
+    .service-card a {
+        opacity: 1;
+        transform: translateY(-35px);
+    }
+
 }
+
